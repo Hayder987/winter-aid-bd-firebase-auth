@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import 'animate.css';
 
 
@@ -8,9 +8,9 @@ const NavBar = () => {
            animate__animated animate__fadeInDown
         ">
             <div className="flex justify-center items-center gap-3">
-                <div className="">
+                <Link to="/donation"><div className="">
                   <img src="./logo4.gif" alt="" className="w-[100px]" />
-                </div>
+                </div></Link>
                 <h1 className="text-xl md:text-2xl font-bold">
                     <span className="text-red-500">W</span>inter 
                     <span className="text-green-700">A</span>id BD</h1>
