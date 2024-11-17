@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        bgColor: "#B3E5FC",
+        textColor: "#080338"
+      }
+    },
   },
   plugins: [
     // eslint-disable-next-line no-undef
