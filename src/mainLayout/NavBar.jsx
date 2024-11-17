@@ -4,7 +4,7 @@ import 'animate.css';
 
 const NavBar = () => {
     return (
-        <div className="bg-bgColor flex justify-between items-center p-2 md:p-5 text-textColor
+        <div className=" flex justify-between items-center py-2 md:py-5 text-textColor
            animate__animated animate__fadeInDown
         ">
             <div className="flex justify-center items-center gap-3">
