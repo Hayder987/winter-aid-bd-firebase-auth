@@ -7,6 +7,7 @@ import HowtoHelp from "../pages/HowtoHelp";
 import Dashboard from "../pages/Dashboard";
 import DonationDetails from "../pages/DonationDetails";
 import LogIn from "../pages/LogIn";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
             {
                 path:"/login",
                 element:<LogIn></LogIn>,
+            },
+            {
+                path:"/register",
+                element:<Register></Register>,
             }
 
         ]
