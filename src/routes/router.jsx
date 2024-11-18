@@ -8,6 +8,7 @@ import Dashboard from "../pages/Dashboard";
 import DonationDetails from "../pages/DonationDetails";
 import LogIn from "../pages/LogIn";
 import Register from "../pages/Register";
+import PrivateRoute from "./Private/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -30,11 +31,11 @@ const router = createBrowserRouter([
             },
             {
                 path:"/dashboard",
-                element:<Dashboard></Dashboard>
+                element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>
             },
             {
                 path:"/details/:id",
-                element:<DonationDetails></DonationDetails>,
+                element:<PrivateRoute><DonationDetails></DonationDetails></PrivateRoute>,
             },
             {
                 path:"/login",

@@ -39,7 +39,7 @@ const NavBar = () => {
             <div className="">
                 {
                     user? <div className="flex justify-center items-center gap-4">
-                        <img src={user.photoURL} alt="" className="w-10 h-10 rounded-full" />
+                        <img src= {user?.photoURL} alt="User" className="w-10 h-10 rounded-full" />
                         <Link to="/login"><button onClick={signOutHandler} className="bg-textColor text-white py-2 px-4 rounded-full">Logout</button></Link>
                     </div>:
                     <Link to="/login"><button className="bg-textColor text-white py-2 px-4 rounded-full">Login</button></Link>

@@ -2,15 +2,16 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ContextAPI/AuthProvider";
 import { toast } from "react-toastify";
-import { FaEye } from "react-icons/fa6";
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 
 const Register = () => {
-  const {registerUser,updateUser,logOutUser} = useContext(AuthContext);
+  const {registerUser,updateUser} = useContext(AuthContext);
   const [errMessage, setErrMessage] = useState(null);
   const navigate = useNavigate();
   const upperCase = /^(?=.*[A-Z]).+$/;
   const lowerCase = /^(?=.*[a-z]).+$/;
+  const [eye, setEye] = useState(false)
   
 
     const registerHandler=(e)=>{
@@ -39,8 +40,7 @@ const Register = () => {
        .then(()=>{
         updateUser(name, path)
         toast.success("User Create SuccessFully!")
-        navigate('/login')
-        logOutUser()
+        navigate('/')
        })
        .catch(err=>{
         setErrMessage(err.message)
@@ -57,7 +57,7 @@ const Register = () => {
           }} className="p-6 md:p-12 min-h-[85vh] mb-12 lg:mb-20">
             <h1 className="text-3xl text-white font-semibold text-center my-8">Create Account winter-Aid-BD</h1>
             <div className="flex justify-center items-center">
-               <div className="card bg-bgColor  w-full max-w-sm shrink-0 shadow-2xl">
+               <div className="card bg-bgColor relative  w-full max-w-sm shrink-0 shadow-2xl">
                  <form onSubmit={registerHandler} className="card-body">
                  <div className="form-control">
                      <label className="label">
@@ -81,7 +81,9 @@ const Register = () => {
                      <label className="label">
                        <span className="label-text">Password</span>
                      </label>
-                     <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                     <input 
+                     type={!eye?"password":"text"} 
+                     name="password" placeholder="password" className="input input-bordered" required />
                      
                    </div>
                    <div className="form-control mt-6">
@@ -100,7 +102,12 @@ const Register = () => {
                    </div>
                    
                  </form>
-                 <p className=""><FaEye /></p>
+                 <p onClick={()=> setEye(!eye)} className="text-gray-500 absolute top-[360px] right-12 text-xl">
+                  {
+                    eye?<FaEyeSlash />: <FaEye />
+                  }
+                 
+                 </p>
                  
                </div>
             </div>
