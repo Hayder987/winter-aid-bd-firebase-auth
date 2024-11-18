@@ -7,7 +7,9 @@ import { toast } from "react-toastify";
 const Register = () => {
   const {registerUser} = useContext(AuthContext);
   const [errMessage, setErrMessage] = useState(null);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const upperCase = /^(?=.*[A-Z]).+$/;
+  const lowerCase = /^(?=.*[a-z]).+$/;
 
     const registerHandler=(e)=>{
        e.preventDefault();
@@ -19,7 +21,15 @@ const Register = () => {
        setErrMessage("");
 
        if(password.length<6){
-        setErrMessage("Password Must Be 6 Digit")
+        setErrMessage("ERROR: Password Must Be 6 Digit!")
+        return
+       }
+       if(!upperCase.test(password)){
+        setErrMessage("ERROR: Password Must Be 1 UpperCase!")
+        return
+       }
+       if(!lowerCase.test(password)){
+        setErrMessage("ERROR: Password Must Be 1 LowerCase!")
         return
        }
        
@@ -29,7 +39,7 @@ const Register = () => {
         navigate('/')
        })
        .catch(err=>{
-        setErrMessage(err.message.split("/")[1])
+        setErrMessage(err.message)
        })
     }
 

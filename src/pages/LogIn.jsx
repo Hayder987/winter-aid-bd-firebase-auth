@@ -1,7 +1,30 @@
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../ContextAPI/AuthProvider";
+import { toast } from "react-toastify";
 
 
 const LogIn = () => {
+
+  const {logInUser} = useContext(AuthContext)
+  const [errMessage, setErrMessage] = useState(null);
+  const navigate = useNavigate();
+ 
+  const loginHandler = e =>{
+    e.preventDefault()
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    setErrMessage("");
+    logInUser(email,password)
+    .then(()=>{
+      toast.success("User Login SuccessFully!")
+      navigate('/')
+     })
+     .catch(err=>{
+      setErrMessage(err.message.split("/")[1])
+     })
+  }
     return (
         <div style={{
             backgroundImage: ' url("https://i.ibb.co.com/WBpQ32n/loginpage-2.png")',
@@ -13,7 +36,7 @@ const LogIn = () => {
             <h1 className="text-3xl text-white font-semibold text-center my-8">Log In to Your Account</h1>
             <div className="flex justify-center items-center">
                <div className="card bg-bgColor  w-full max-w-sm shrink-0 shadow-2xl">
-                 <form className="card-body">
+                 <form onSubmit={loginHandler} className="card-body">
                    <div className="form-control">
                      <label className="label">
                        <span className="label-text">Email</span>
@@ -48,6 +71,11 @@ const LogIn = () => {
                         Don't Have Account? 
                         <Link to="/register"><span className="text-blue-600 cursor-pointer underline">Register Now</span></Link>
                      </p>
+                   </div>
+                   <div className="form-control mt-6">
+                     {
+                      errMessage && <p className="text-red-500 text-center">{errMessage}</p>
+                     }
                    </div>
                  </div>
                </div>
