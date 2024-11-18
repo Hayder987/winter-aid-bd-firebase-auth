@@ -13,6 +13,7 @@ const Register = () => {
   const lowerCase = /^(?=.*[a-z]).+$/;
   const [eye, setEye] = useState(false)
   
+  
 
     const registerHandler=(e)=>{
        e.preventDefault();
