@@ -6,6 +6,7 @@ import DonationCampaigns from "../pages/DonationCampaigns";
 import HowtoHelp from "../pages/HowtoHelp";
 import Dashboard from "../pages/Dashboard";
 import DonationDetails from "../pages/DonationDetails";
+import LogIn from "../pages/LogIn";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
             {
                 path:"/details/:id",
                 element:<DonationDetails></DonationDetails>,
+            },
+            {
+                path:"/login",
+                element:<LogIn></LogIn>,
             }
 
         ]

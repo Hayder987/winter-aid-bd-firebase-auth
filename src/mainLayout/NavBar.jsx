@@ -24,7 +24,7 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="">
-                <button className="bg-textColor text-white py-3 px-4">Login</button>
+                <Link to="/login"><button className="bg-textColor text-white py-3 px-4">Login</button></Link>
             </div>
         </div>
     );
