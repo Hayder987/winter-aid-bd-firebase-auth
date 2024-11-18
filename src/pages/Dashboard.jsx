@@ -11,12 +11,12 @@ const Dashboard = () => {
                 <div className="flex justify-center items-center">
                 <img src="./welcome.gif" alt="" className="w-[170px]" />
                 </div>
-                <h1 className="text-center text-3xl md:text-5xl font-semibold mb-4">Welcome! {user.displayName}</h1>
+                <h1 className="text-center text-3xl md:text-5xl font-semibold mb-4">Welcome! {user?.displayName}</h1>
                 <div className="flex justify-center items-center p-6">
-                  <img src={user.photoURL} alt="" className="w-[200px]" />
+                  <img src={user?.photoURL} alt="" className="w-[200px]" />
                 </div>
                 <div className="flex justify-center items-center p-6">
-                  <p className="text-xl font-semibold text-gray-500">{user.email}</p>
+                  <p className="text-xl font-semibold text-gray-500">{user?.email}</p>
                 </div>
                 <div className="flex justify-center items-center p-6">
                  <Link to="/utility/update"><button 
