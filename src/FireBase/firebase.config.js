@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyD_nCxb9xonIMv3F2hLeTuQR0wNLEHRRxA",
-  authDomain: "winter-aid-bd.firebaseapp.com",
-  projectId: "winter-aid-bd",
-  storageBucket: "winter-aid-bd.firebasestorage.app",
-  messagingSenderId: "610072786677",
-  appId: "1:610072786677:web:2c76f2e054bad9986c37bc"
+  apiKey: import.meta.env.Vite_apiKey,
+  authDomain: import.meta.env.Vite_authDomain,
+  projectId: import.meta.env.Vite_projectId,
+  storageBucket: import.meta.env.Vite_storageBucket,
+  messagingSenderId: import.meta.env.Vite_messagingSenderId,
+  appId: import.meta.env.Vite_appId
 };
 
 

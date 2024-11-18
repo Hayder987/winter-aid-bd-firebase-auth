@@ -1,6 +1,23 @@
+import { useContext } from "react";
+import { AuthContext } from "../ContextAPI/AuthProvider";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 
 const UpdateProfile = () => {
+     const {updateUser} = useContext(AuthContext)
+     const navigate  = useNavigate()
+    const updateProfileHandler = e =>{
+        e.preventDefault()
+        const name = e.target.name.value;
+        const path = e.target.path.value;
+        updateUser(name, path)
+        .then(()=>{
+            toast.success("Your Profile Update SuccessFully")
+            navigate('/dashboard')
+        })
+    }
+
     return (
         <div style={{
             backgroundImage: ' url("https://i.ibb.co.com/WBpQ32n/loginpage-2.png")',
@@ -17,7 +34,7 @@ const UpdateProfile = () => {
             </div>
             <div className="flex justify-center items-center">
                <div className="card bg-bgColor relative  w-full max-w-sm shrink-0 shadow-2xl">
-                 <form className="card-body">
+                 <form onSubmit={updateProfileHandler} className="card-body">
                    <div className="form-control">
                      <label className="label">
                        <span className="label-text">Name</span>
