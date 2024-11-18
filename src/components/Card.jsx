@@ -16,7 +16,7 @@ const Card = ({item}) => {
             className="w-full object-cover h-[350px] rounded-xl mb-4" />
             <h3 className="text-xl font-semibold mb-3">{title}</h3>
             <p className="text-gray-500 mb-6">{description}</p>
-            <button onClick={()=>navigate(`/donation/${id}`)} className="bg-textColor text-white font-medium rounded-full py-3 px-8">Donate Now</button>
+            <button onClick={()=>navigate(`/details/${id}`)} className="bg-textColor text-white font-medium rounded-full py-3 px-8">Donate Now</button>
         </div>
     );
 };

@@ -5,9 +5,9 @@
       "image": "https://i.ibb.co.com/FkpnqP4/dhaka1.jpg",
       "description": "We are collecting jackets, blankets, and sweaters for the homeless in Dhaka city to help them survive the cold weather.",
       "status": "Active",
-      "contactInfo": [
-        { "phone": "0123456789", "email": "dhaka.warmth@gmail.com" }
-      ],
+      "contactInfo": 
+        { "phone": "0123456789", "email": "dhaka.warmth@gmail.com" },
+      
       "division": "Dhaka"
     },
     {
@@ -16,9 +16,9 @@
       "image": "https://i.ibb.co.com/ftrF7sY/Chittagong-Winter-Relief.jpg",
       "description": "Help us deliver warm clothes to vulnerable communities in Chittagong. Blankets and winter wear are especially needed.",
       "status": "Active",
-      "contactInfo": [
+      "contactInfo": 
         { "phone": "0987654321", "email": "chittagong.relief@gmail.com" }
-      ],
+      ,
       "division": "Chittagong"
     },
     {
@@ -27,9 +27,9 @@
       "image": "https://i.ibb.co.com/gMTbhVH/Sylhet-Warmth-Project.png",
       "description": "Our aim is to distribute warm clothing to the underprivileged families in Sylhet who are suffering from the cold this winter.",
       "status": "Pending",
-      "contactInfo": [
+      "contactInfo": 
         { "phone": "0198765432", "email": "sylhet.warmth@gmail.com" }
-      ],
+      ,
       "division": "Sylhet"
     },
     {
@@ -38,9 +38,9 @@
       "image": "https://i.ibb.co.com/f4812rT/Khulna-Clothing-Drive.jpg",
       "description": "Khulna's homeless population needs our help this winter. Donate your jackets, sweaters, and other warm items.",
       "status": "Active",
-      "contactInfo": [
+      "contactInfo": 
         { "phone": "0159876543", "email": "khulna.clothing@gmail.com" }
-      ],
+      ,
       "division": "Khulna"
     },
     {
@@ -49,9 +49,9 @@
       "image": "https://i.ibb.co.com/qMhGtFP/Barisal-Winter-Aid.webp",
       "description": "Barisal faces extreme cold. Join our campaign to provide winter clothing for the poor and needy in the region.",
       "status": "Active",
-      "contactInfo": [
+      "contactInfo": 
         { "phone": "0171234567", "email": "barisal.aid@gmail.com" }
-      ],
+      ,
       "division": "Barisal"
     },
     {
@@ -60,9 +60,9 @@
       "image": "https://i.ibb.co.com/s3Zc4ZH/Rajshahi-Warm-Clothing-Appeal.jpg",
       "description": "Help us bring warmth to the homeless and underprivileged in Rajshahi with your donated winter clothes.",
       "status": "Active",
-      "contactInfo": [
+      "contactInfo": 
         { "phone": "0182345678", "email": "rajshahi.help@gmail.com" }
-      ],
+      ,
       "division": "Rajshahi"
     },
     {
@@ -71,9 +71,9 @@
       "image": "https://i.ibb.co.com/HCkRcyQ/Rangpur-Blanket-Distribution.jpg",
       "description": "Rangpur is cold this winter. We are collecting blankets to help those without proper shelter and warmth.",
       "status": "Pending",
-      "contactInfo": [
+      "contactInfo": 
         { "phone": "0132456789", "email": "rangpur.relief@gmail.com" }
-      ],
+      ,
       "division": "Rangpur"
     },
     {
@@ -82,9 +82,9 @@
       "image": "https://i.ibb.co.com/1MGS1Jz/Mymensingh-Winter-Support.jpg",
       "description": "Join our Mymensingh winter clothing campaign to support the underprivileged with blankets, sweaters, and other winter gear.",
       "status": "Active",
-      "contactInfo": [
+      "contactInfo": 
         { "phone": "0162345678", "email": "mymensingh.support@gmail.com" }
-      ],
+      ,
       "division": "Mymensingh"
     },
     {
@@ -93,9 +93,9 @@
       "image": "https://i.ibb.co.com/pLHcjYQ/Comilla-Warmth-Initiative.jpg",
       "description": "We are focusing on helping those who lack warmth in Comilla. Donate blankets, jackets, or any warm clothes.",
       "status": "Active",
-      "contactInfo": [
+      "contactInfo": 
         { "phone": "0179876543", "email": "comilla.initiative@gmail.com" }
-      ],
+      ,
       "division": "Comilla"
     }
   ]

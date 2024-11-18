@@ -31,7 +31,7 @@ const router = createBrowserRouter([
                 element:<Dashboard></Dashboard>
             },
             {
-                path:"/donation/:id",
+                path:"/details/:id",
                 element:<DonationDetails></DonationDetails>,
             }
 
