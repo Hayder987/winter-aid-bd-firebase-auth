@@ -9,6 +9,7 @@ import DonationDetails from "../pages/DonationDetails";
 import LogIn from "../pages/LogIn";
 import Register from "../pages/Register";
 import PrivateRoute from "./Private/PrivateRoute";
+import UtilitesComponents from "../pages/UtilitesComponents";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
             {
                 path:"/register",
                 element:<Register></Register>,
+            },
+            {
+                path:"/utility/:id",
+                element:<UtilitesComponents></UtilitesComponents>,
             }
 
         ]

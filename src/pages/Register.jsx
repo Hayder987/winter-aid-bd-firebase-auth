@@ -6,7 +6,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 
 const Register = () => {
-  const {registerUser,updateUser} = useContext(AuthContext);
+  const {registerUser,updateUser,logOutUser} = useContext(AuthContext);
   const [errMessage, setErrMessage] = useState(null);
   const navigate = useNavigate();
   const upperCase = /^(?=.*[A-Z]).+$/;
@@ -40,7 +40,8 @@ const Register = () => {
        .then(()=>{
         updateUser(name, path)
         toast.success("User Create SuccessFully!")
-        navigate('/')
+        logOutUser()
+        navigate('/login')
        })
        .catch(err=>{
         setErrMessage(err.message)
