@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 
 const LogIn = () => {
 
-  const {logInUser} = useContext(AuthContext)
+  const {logInUser, googleLogin} = useContext(AuthContext)
   const [errMessage, setErrMessage] = useState(null);
   const navigate = useNavigate();
  
@@ -24,7 +24,20 @@ const LogIn = () => {
      .catch(err=>{
       setErrMessage(err.message.split("/")[1])
      })
+  };
+
+  const googleLogIn = ()=>{
+    googleLogin()
+    .then(()=>{
+      toast.success("User Login SuccessFully!")
+      navigate('/')
+    })
+    .catch(err=>{
+      setErrMessage(err.message.split("/")[1])
+     })
+
   }
+
     return (
         <div style={{
             backgroundImage: ' url("https://i.ibb.co.com/WBpQ32n/loginpage-2.png")',
@@ -60,7 +73,7 @@ const LogIn = () => {
                  <div className="px-6 pb-6">
                  <div className="divider">OR</div>
                    <div className="form-control mt-6">
-                     <button className="flex justify-center items-center border-textColor gap-3 border-2 p-2 rounded-full">
+                     <button onClick={googleLogIn} className="flex justify-center items-center border-textColor gap-3 border-2 p-2 rounded-full">
                         <img src="https://i.ibb.co.com/2ZcdcPq/googlelogo.webp" alt="" 
                         className="w-8 h-8 rounded-full" />
                         <span className="font-semibold text-textColor">Sign With Google</span>
@@ -69,7 +82,7 @@ const LogIn = () => {
                    <div className="form-control mt-6">
                      <p className="text-center">
                         Don't Have Account? 
-                        <Link to="/register"><span className="text-blue-600 cursor-pointer underline">Register Now</span></Link>
+                        <Link to="/register"> <span className="text-blue-600 cursor-pointer underline">Register Now</span></Link>
                      </p>
                    </div>
                    <div className="form-control mt-6">

@@ -1,7 +1,20 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../ContextAPI/AuthProvider";
+import { toast } from "react-toastify";
 
 
 const NavBar = () => {
+    const {user, logOutUser} = useContext(AuthContext)
+
+
+    const signOutHandler = ()=>{
+        logOutUser()
+        .then(()=>{
+            toast.info("Log Out SuccessFully!")
+        })
+    }
+
     return (
         <div className=" flex justify-between items-center py-2 md:py-5 text-textColor
            animate__animated animate__fadeInDown
@@ -24,7 +37,13 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="">
-                <Link to="/login"><button className="bg-textColor text-white py-3 px-4">Login</button></Link>
+                {
+                    user? <div className="flex justify-center items-center gap-4">
+                        <img src={user.photoURL} alt="" className="w-10 h-10 rounded-full" />
+                        <Link to="/login"><button onClick={signOutHandler} className="bg-textColor text-white py-2 px-4 rounded-full">Logout</button></Link>
+                    </div>:
+                    <Link to="/login"><button className="bg-textColor text-white py-2 px-4 rounded-full">Login</button></Link>
+                }
             </div>
         </div>
     );

@@ -2,14 +2,16 @@ import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ContextAPI/AuthProvider";
 import { toast } from "react-toastify";
+import { FaEye } from "react-icons/fa6";
 
 
 const Register = () => {
-  const {registerUser} = useContext(AuthContext);
+  const {registerUser,updateUser,logOutUser} = useContext(AuthContext);
   const [errMessage, setErrMessage] = useState(null);
   const navigate = useNavigate();
   const upperCase = /^(?=.*[A-Z]).+$/;
   const lowerCase = /^(?=.*[a-z]).+$/;
+  
 
     const registerHandler=(e)=>{
        e.preventDefault();
@@ -35,8 +37,10 @@ const Register = () => {
        
        registerUser(email, password)
        .then(()=>{
+        updateUser(name, path)
         toast.success("User Create SuccessFully!")
-        navigate('/')
+        navigate('/login')
+        logOutUser()
        })
        .catch(err=>{
         setErrMessage(err.message)
@@ -96,6 +100,7 @@ const Register = () => {
                    </div>
                    
                  </form>
+                 <p className=""><FaEye /></p>
                  
                </div>
             </div>
