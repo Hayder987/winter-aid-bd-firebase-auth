@@ -14,14 +14,29 @@ const LogIn = () => {
   const [eye, setEye] = useState(false)
   const {state} = useLocation();
   const emailRef = useRef()
+  const upperCase = /^(?=.*[A-Z]).+$/;
+  const lowerCase = /^(?=.*[a-z]).+$/;
 
  
   const loginHandler = e =>{
     e.preventDefault()
     const email = e.target.email.value;
     const password = e.target.password.value;
-
     setErrMessage("");
+
+    if(password.length<6){
+      setErrMessage("ERROR: Password Must Be 6 Digit!")
+      return
+     }
+     if(!upperCase.test(password)){
+      setErrMessage("ERROR: Password Must Be 1 UpperCase!")
+      return
+     }
+     if(!lowerCase.test(password)){
+      setErrMessage("ERROR: Password Must Be 1 LowerCase!")
+      return
+     }
+
     logInUser(email,password)
     .then(()=>{
       toast.success("User Login SuccessFully!")
