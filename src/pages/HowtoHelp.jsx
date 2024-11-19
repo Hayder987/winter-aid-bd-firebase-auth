@@ -10,10 +10,10 @@ const HowtoHelp = () => {
             </div>
             <div className="flex flex-col gap-12 lg:flex-row animate__animated animate__fadeInDownBig animate__fast">
                 
-                <div className="md:w-2/4 py-12 animate__animated animate__fadeInLeft animate__slow">
+                <div className="lg:w-2/4 py-12 animate__animated animate__fadeInLeft animate__slow">
                   <Accordion></Accordion>
                 </div>
-                <div className="md:w-2/4 py-12 animate__animated animate__fadeInRight animate__slow">
+                <div className="lg:w-2/4 py-12 animate__animated animate__fadeInRight animate__slow">
                     <HowIDonate></HowIDonate>
                 </div>
             </div>

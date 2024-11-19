@@ -14,7 +14,7 @@ const AboutUS = () => {
                  <div className="">
                  <Link to="/help"><button className="bg-textColor text-white font-medium rounded-full py-3 px-8">Learn More</button></Link>
                  </div>
-                 <img src="https://i.ibb.co.com/MkGHMsn/aboutus.jpg" alt="" className=" md:w-[90%] md:h-[650px]" />
+                 <img src="https://i.ibb.co.com/MkGHMsn/aboutus.jpg" alt="" className=" md:w-[90%] md:h-[650px] rounded-xl" />
             </div>
         </div>
     );

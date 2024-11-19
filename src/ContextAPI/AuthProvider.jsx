@@ -21,6 +21,7 @@ const AuthProvider = ({children}) => {
     }
 
     const updateUser =(name, path)=>{
+        setLoading(true)
        return updateProfile(auth.currentUser, {displayName:name, photoURL:path})
     }
     const googleLogin=()=>{

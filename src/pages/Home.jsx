@@ -9,10 +9,11 @@ const Home = () => {
     return (
         <div className="animate__animated animate__slideInUp ">
             <Banner></Banner>
+            <DonationStatus></DonationStatus>
             <AboutUS></AboutUS>
             <Work></Work>
             <Award></Award>
-            <DonationStatus></DonationStatus>
+            
         </div>
     );
 };
