@@ -1,5 +1,5 @@
 import { BiSolidError } from "react-icons/bi";
-import { useRouteError } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 import 'animate.css';
 
 
@@ -25,6 +25,9 @@ const ErrorPage = () => {
              <img src="https://i.ibb.co.com/nQqnRLf/page-Not-found.jpg" alt="" className="
              animate__animated animate__zoomIn animate__slow
              " />
+             <div className="mt-6">
+               <Link to="/"><button className="p-3 block mx-auto px-5 bg-textColor text-white rounded-xl">Back To Home</button></Link>
+             </div>
           </div>
             
         </div>

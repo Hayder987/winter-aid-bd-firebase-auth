@@ -5,8 +5,6 @@ import UpdateProfile from "../components/UpdateProfile";
 
 const UtilitesComponents = () => {
     const {id} = useParams();
-
-    console.log(id)
     return (
         <div>
             {

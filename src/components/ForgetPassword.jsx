@@ -1,20 +1,22 @@
-import { sendPasswordResetEmail } from "firebase/auth";
-import { auth } from "../FireBase/firebase.config";
+
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../ContextAPI/AuthProvider";
 
 
 
 const ForgetPassword = () => {
-   const navigate = useNavigate()
+   const navigate = useNavigate();
+   const {passwordRest,resetEmail} = useContext(AuthContext)
 
     const resetPasswordHandler= e =>{
         e.preventDefault();
 
         const email = e.target.email.value;
 
-        sendPasswordResetEmail(auth, email)
+        passwordRest(email)
         .then(()=>{
             Swal.fire({
                 position: "top-middle",
@@ -52,7 +54,7 @@ const ForgetPassword = () => {
                      <label className="label">
                        <span className="label-text">Enter Your Email:</span>
                      </label>
-                     <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                     <input type="email" value={resetEmail} name="email" placeholder="email" className="input input-bordered" required />
                    </div>
                    <div className="form-control mt-6">
                      <button className="btn bg-textColor text-white">Reset Password</button>

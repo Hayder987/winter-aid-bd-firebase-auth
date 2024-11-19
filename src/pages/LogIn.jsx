@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ContextAPI/AuthProvider";
 import { toast } from "react-toastify";
@@ -7,11 +7,12 @@ import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 const LogIn = () => {
 
-  const {logInUser, googleLogin} = useContext(AuthContext)
+  const {logInUser, googleLogin,setResetEmail} = useContext(AuthContext)
   const [errMessage, setErrMessage] = useState(null);
   const navigate = useNavigate();
   const [eye, setEye] = useState(false)
   const {state} = useLocation();
+  const emailRef = useRef()
 
  
   const loginHandler = e =>{
@@ -51,6 +52,12 @@ const LogIn = () => {
      })
 
   }
+  const passResetHandler=()=>{
+    const userEmail = emailRef?.current?.value 
+    setResetEmail(userEmail)
+  }
+
+  
 
     return (
         <div style={{
@@ -68,7 +75,7 @@ const LogIn = () => {
                      <label className="label">
                        <span className="label-text">Email</span>
                      </label>
-                     <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                     <input type="email" ref={emailRef} name="email" placeholder="email" className="input input-bordered" required />
                    </div>
                    <div className="form-control">
                      <label className="label">
@@ -78,7 +85,8 @@ const LogIn = () => {
                      type={!eye?"password":"text"} 
                      name="password" placeholder="password" className="input input-bordered" required />
                      <label className="label">
-                       <Link to="/utility/password" className="label-text-alt text-base link link-hover">Forgot password?</Link>
+                       <Link to="/utility/password" className="label-text-alt text-base link link-hover">
+                       <p onClick={passResetHandler} className="">Forgot password?</p></Link>
                      </label>
                    </div>
                    <div className="form-control mt-6">
