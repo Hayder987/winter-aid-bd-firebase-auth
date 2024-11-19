@@ -1,6 +1,7 @@
 import { BiSolidError } from "react-icons/bi";
 import { Link, useRouteError } from "react-router-dom";
 import 'animate.css';
+import { Helmet } from "react-helmet";
 
 
 const ErrorPage = () => {
@@ -9,6 +10,9 @@ const ErrorPage = () => {
          
     return (
         <div className="flex justify-center items-center">
+         <Helmet>
+            <title>Error 404</title>
+         </Helmet>
           <div className="p-2 md:p-12">
              <p className="mb-4 text-7xl text-red-500 flex justify-center
              animate__animated animate__flash animate__infinite

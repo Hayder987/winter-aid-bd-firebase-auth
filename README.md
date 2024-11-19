@@ -35,6 +35,7 @@ Winter Aid BD is a non-profit platform dedicated to collecting and distributing 
 - **Swiper**: A modern mobile touch slider to enhance user experience with carousels and sliding elements.
 - **Tailwind CSS**: Utility-first CSS framework for styling and custom layouts.
 - **DaisyUI**: A Tailwind CSS plugin that provides pre-designed components to speed up development.
+- - **react-helmet**: For Dynamic Title of Page
 
 ## npm Package
 
@@ -46,6 +47,7 @@ Winter Aid BD is a non-profit platform dedicated to collecting and distributing 
 - react-toastify
 - sweetalert2
 - swiper
+- react-helmet
 
 ## Requirement Data
 

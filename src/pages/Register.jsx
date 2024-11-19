@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ContextAPI/AuthProvider";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { Helmet } from "react-helmet";
 
 
 const Register = () => {
@@ -57,6 +58,9 @@ const Register = () => {
             backgroundRepeat: 'no-repeat',
             width: '100%',
           }} className="p-6 md:p-12 min-h-[85vh] mb-12 lg:mb-20">
+            <Helmet>
+              <title>Register || WinterAid BD</title>
+            </Helmet>
             <h1 className="text-3xl text-white font-semibold text-center my-8">Create Account winter-Aid-BD</h1>
             <div className="flex justify-center items-center">
                <div className="card bg-bgColor relative  w-full max-w-sm shrink-0 shadow-2xl">

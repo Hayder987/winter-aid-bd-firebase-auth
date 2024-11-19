@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../ContextAPI/AuthProvider";
 import { toast } from "react-toastify";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import { Helmet } from "react-helmet";
 
 
 const LogIn = () => {
@@ -67,6 +68,9 @@ const LogIn = () => {
             backgroundRepeat: 'no-repeat',
             width: '100%',
           }} className="p-6 md:p-12 min-h-[85vh] mb-12 lg:mb-20">
+            <Helmet>
+              <title>Login</title>
+            </Helmet>
             <h1 className="text-3xl text-white font-semibold text-center my-8">Log In to Your Account</h1>
             <div className="flex justify-center items-center">
                <div className="card bg-bgColor relative  w-full max-w-sm shrink-0 shadow-2xl">

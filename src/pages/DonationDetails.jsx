@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -52,6 +53,9 @@ const donateFormHandler =(e)=>{
    
   return (
     <div className="">
+      <Helmet>
+        <title>Donation Deatails || WinterAid BD</title>
+      </Helmet>
         <h1 className="text-3xl font-bold mb-8 text-center">Donate For {title}</h1>
         <div
          style={{

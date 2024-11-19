@@ -1,9 +1,13 @@
+import { Helmet } from "react-helmet";
 import Accordion from "../components/Accordion";
 import HowIDonate from "../components/HowIDonate";
 
 const HowtoHelp = () => {
     return (
         <div>
+            <Helmet>
+                <title>Help || WinterAid BD</title>
+            </Helmet>
             <div className="flex justify-center items-center ">
               <h3 className="text-3xl font-bold text-center py-12">How You Can Help</h3>
               <img src="./help.gif" alt="" className="w-[100px]" />

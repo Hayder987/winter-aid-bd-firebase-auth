@@ -1,12 +1,17 @@
 import { useContext } from "react";
 import { AuthContext } from "../ContextAPI/AuthProvider";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 const Dashboard = () => {
     const {user} = useContext(AuthContext)
     return (
+      
         <div className="flex justify-center items-center py-12">
+          <Helmet>
+            <title>DashBoard || WinterAid BD</title>
+          </Helmet>
             <div className="max-w-[700px] mx-auto p-10 border-2 rounded-xl">
                 <div className="flex justify-center items-center">
                 <img src="./welcome.gif" alt="" className="w-[170px]" />
