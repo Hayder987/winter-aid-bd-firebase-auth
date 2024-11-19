@@ -24,7 +24,6 @@ const NavBar = () => {
 
     return (
         <div className=" flex justify-between items-center py-2 md:py-5 text-textColor
-          
         ">
             <div className="flex justify-center items-center gap-3">
                 <Link to="/donation"><div className="">

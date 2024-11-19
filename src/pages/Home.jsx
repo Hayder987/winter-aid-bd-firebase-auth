@@ -7,7 +7,7 @@ import Work from "../components/Work";
 
 const Home = () => {
     return (
-        <div className="animate__animated animate__slideInUp ">
+        <div className="animate__animated animate__zoomIn ">
             <Banner></Banner>
             <DonationStatus></DonationStatus>
             <AboutUS></AboutUS>
