@@ -1,6 +1,7 @@
 import AboutUS from "../components/AboutUS";
 import Award from "../components/Award";
 import Banner from "../components/Banner";
+import DonationStatus from "../components/DonationStatus";
 import Work from "../components/Work";
 
 
@@ -11,6 +12,7 @@ const Home = () => {
             <AboutUS></AboutUS>
             <Work></Work>
             <Award></Award>
+            <DonationStatus></DonationStatus>
         </div>
     );
 };
