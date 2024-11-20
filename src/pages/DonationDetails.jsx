@@ -1,12 +1,16 @@
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const DonationDetails = () => {
   const { id } = useParams();
-  const [item, setItem] = useState(null)
+  const [item, setItem] = useState(null);
+  const qtyRef = useRef();
+  const itemsRef = useRef()
+  const [condition, setCondition] = useState(false)
+  const [itemCondition, setItemCondition] = useState(false)
   
   useEffect(()=>{
       fetch("/campaindata.json")
@@ -47,10 +51,33 @@ const donateFormHandler =(e)=>{
       `
     }
   });
+  setCondition(false)
+  setItemCondition(false)
   e.target.reset()
 
 }
+
+const quantityHandler =()=>{
+  if(qtyRef.current.value==="above"){
+    setCondition(true)
+  }
+  else{
+    setCondition(false)
+  }
    
+}
+
+
+const othersItemHandler=()=>{
+  if(itemsRef.current.value==="others"){
+    setItemCondition(true)
+  }
+  else{
+    setCondition(false)
+  }
+}
+
+
   return (
     <div className="">
       <Helmet>
@@ -81,22 +108,34 @@ const donateFormHandler =(e)=>{
               <form  onSubmit={donateFormHandler}>
               <div className="mt-6 border-t-2 py-6">
                 <div className="flex gap-3 justify-center items-center">
-                   <select name="item" className="select select-bordered md:w-3/4 max-w-xs" >
+                   <select onClick={othersItemHandler} ref={itemsRef} name="item" className="select select-bordered md:w-3/4 max-w-xs" >
                     <option >Item type</option>
                     <option value="blanket">Blanket</option>
                     <option value="jacket">Jacket</option>
                     <option value="sweater">Sweater</option>
+                    <option value="both">Both</option>
+                    <option value="others">Others</option>
                    </select>
 
-                   <select name="qty" className="select select-bordered md:w-1/4 max-w-xs">
+                   <select onClick={quantityHandler} ref={qtyRef} name="qty" className="select select-bordered md:w-1/4 max-w-xs">
                     <option >Quantity</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
+                    <option value="above">Above</option>
                    </select>
+                   
+                   <div className={`${condition? "flex" : "hidden"}`}>
+                    <input type="text" name="qty" placeholder="Qty" className="input input-bordered w-[80px]"/>
+                   </div>
+                   
 
+                </div>
+                <div 
+                className={`${itemCondition?"flex justify-center items-center":"hidden"} mt-4`} >
+                  <input type="text" name="others" placeholder="Enter item name" className="input input-bordered w-full"/>
                 </div>
                 <div className="flex justify-center items-center mt-4" >
                   <input type="text" name="address" placeholder="e.g. House 12, Road 5, Dhanmondi, Dhaka" className="input input-bordered w-full" required/>
