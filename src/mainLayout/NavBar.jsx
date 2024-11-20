@@ -4,6 +4,7 @@ import { AuthContext } from "../ContextAPI/AuthProvider";
 import { toast } from "react-toastify";
 import { MdMenuOpen } from "react-icons/md";
 import { GiCrossMark } from "react-icons/gi";
+import { FiLogOut } from "react-icons/fi";
 
 
 const NavBar = () => {
@@ -61,13 +62,14 @@ const NavBar = () => {
                 </ul>
             </div>
 
-            <div className="">
+            <div className=" ">
                 {
-                    user? <div className="flex justify-center items-center gap-4">
+                    user? <div className="flex justify-center items-center gap-4 border border-textColor py-1 px-3 rounded-xl">
                         <img src= {user?.photoURL} alt="User" className="w-10 h-10 rounded-full" />
-                        <Link to="/login"><button onClick={signOutHandler} className="bg-textColor text-white py-2 px-4 rounded-full">Logout</button></Link>
+                        <Link to="/login"><button onClick={signOutHandler}
+                         className="text-2xl border-2 rounded-xl p-2"><FiLogOut /></button></Link>
                     </div>:
-                    <Link to="/login"><button className="bg-textColor text-white py-2 px-4 rounded-full">Login</button></Link>
+                    <Link to="/login"><button className="bg-textColor text-white py-2 px-6 rounded-full">Login</button></Link>
                 }
             </div>
         </div>
