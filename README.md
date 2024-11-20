@@ -6,8 +6,8 @@ Winter Aid BD is a non-profit platform dedicated to collecting and distributing 
 
 ## Live URL
 
-### [Winter Aid BD](https://winter-aid-bd.web.app/)
-### (https://winter-aid-bd.web.app/)
+### [Winter Aid BD](https://winter-aid-bd.firebaseapp.com/)
+### (https://winter-aid-bd.firebaseapp.com/)
 
 ## Key Features
 
