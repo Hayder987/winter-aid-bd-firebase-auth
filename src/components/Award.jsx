@@ -5,12 +5,12 @@ const Award = () => {
         <div className="my-12">
             <h1 className="text-3xl md:text-4xl font-bold text-center mb-14">The Journey Of The Rewards</h1>
             <div className="flex flex-col justify-center items-center gap-8 lg:flex-row">
-               <div className="lg:w-6/12">
+               <div className="lg:w-6/12 animate__animated animate__slideInLeft">
                     <h1 className="flex flex-col text-5xl font-semibold mb-6">
                         <span className="text-textColor">AWARDS AND</span>
                         <span className="text-gray-500">RECOGINATION</span>
                     </h1>
-                    <h3 className="text-2xl font-bold">
+                    <h3 className="text-2xl font-bold ">
                         Acknowledging Efforts, Celebrating Success, Awards That Reflect Our Values
                     </h3>
                     <p className="">
@@ -27,7 +27,7 @@ const Award = () => {
                      their work.
                     </p>
                </div>
-               <div className="lg:6/12 p-2 lg:py-12">
+               <div className="lg:6/12 p-2 lg:py-12 animate__animated animate__slideInRight">
                  <img src="https://i.ibb.co.com/LNGyXRj/EEPC-Award.webp" alt="" />
                </div>
             </div>

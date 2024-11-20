@@ -7,7 +7,7 @@ const DonationCampaigns = () => {
     const data = useLoaderData();
     
     return (
-        <div className="animate__animated animate__fadeInUp">
+        <div className="animate__animated animate__slideInDown">
             <Helmet>
                 <title>DonationCampaign || WinterAid BD</title>
             </Helmet>
