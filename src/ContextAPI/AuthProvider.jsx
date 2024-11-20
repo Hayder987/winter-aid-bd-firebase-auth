@@ -61,8 +61,6 @@ const AuthProvider = ({children}) => {
         setResetEmail
     };
 
-    console.log(resetEmail)
-
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

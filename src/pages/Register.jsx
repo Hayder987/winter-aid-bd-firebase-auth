@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 
 
 const Register = () => {
-  const {registerUser,updateUser,logOutUser} = useContext(AuthContext);
+  const {registerUser,updateUser,logOutUser,googleLogin} = useContext(AuthContext);
   const [errMessage, setErrMessage] = useState(null);
   const navigate = useNavigate();
   const upperCase = /^(?=.*[A-Z]).+$/;
@@ -46,6 +46,17 @@ const Register = () => {
         navigate('/login')
        })
        .catch(err=>{
+        setErrMessage(err.message)
+       })
+    }
+
+    const googleLogIn =()=>{
+      googleLogin()
+      .then(()=>{
+        navigate("/")
+        toast.success("User Login SuccessFully!")
+      })
+      .catch(err=>{
         setErrMessage(err.message)
        })
     }
@@ -108,6 +119,16 @@ const Register = () => {
                    </div>
                    
                  </form>
+                 <div className="px-6 pb-6 mt-[-50px]">
+                 <div className="divider">OR</div>
+                   <div className="form-control mt-6">
+                     <button onClick={googleLogIn} className="flex justify-center items-center border-textColor gap-3 border-2 p-2 rounded-full">
+                        <img src="https://i.ibb.co.com/2ZcdcPq/googlelogo.webp" alt="" 
+                        className="w-8 h-8 rounded-full" />
+                        <span className="font-semibold text-textColor">Sign With Google</span>
+                     </button>
+                   </div>
+                 </div>
                  <p onClick={()=> setEye(!eye)} className="text-gray-500 absolute top-[360px] right-12 text-xl">
                   {
                     eye?<FaEyeSlash />: <FaEye />
