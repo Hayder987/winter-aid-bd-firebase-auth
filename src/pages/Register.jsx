@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 
 
 const Register = () => {
-  const {registerUser,updateUser,logOutUser,googleLogin} = useContext(AuthContext);
+  const {registerUser,updateUser,googleLogin} = useContext(AuthContext);
   const [errMessage, setErrMessage] = useState(null);
   const navigate = useNavigate();
   const upperCase = /^(?=.*[A-Z]).+$/;
@@ -42,8 +42,7 @@ const Register = () => {
        .then(()=>{
         updateUser(name, path)
         toast.success("User Create SuccessFully!")
-        logOutUser()
-        navigate('/login')
+        navigate('/')
        })
        .catch(err=>{
         setErrMessage(err.message)

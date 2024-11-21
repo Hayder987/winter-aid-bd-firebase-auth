@@ -73,7 +73,7 @@ const othersItemHandler=()=>{
     setItemCondition(true)
   }
   else{
-    setCondition(false)
+    setItemCondition(false)
   }
 }
 
