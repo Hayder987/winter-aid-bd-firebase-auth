@@ -33,7 +33,14 @@ const Footer = () => {
                    <br />
                    Providing Donation since 2004
                  </p>
+                 
                </aside>
+               <p className="">
+                 Email: hayderbd4290@gmail.com
+                 </p>
+                 <p className="">
+                 Phone: +8801700000000
+                 </p>
                <nav className="md:place-self-center md:justify-self-end">
                  <div className="grid grid-flow-col gap-4">
                    <a>
