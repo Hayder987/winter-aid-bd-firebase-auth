@@ -1,15 +1,15 @@
 # Winter Aid BD - Clothing Donation Platform
 
-## Project Purpose
+## 🌟 Project Purpose
 
 Winter Aid BD is a non-profit platform dedicated to collecting and distributing winter clothes for those in need. Our mission is to provide warm clothing to the underprivileged during the winter season, ensuring that no one suffers from the cold. The website allows donors to easily contribute and track the donation process, while volunteers can sign up to assist in the distribution.
 
-## Live URL
+## 🌐 Live URL
 
 ### [Winter Aid BD](https://winter-aid-bd.firebaseapp.com/)
 ### (https://winter-aid-bd.firebaseapp.com/)
 
-## Key Features
+## ✨ Key Features
 
 - **Donation Campaigns**: View and participate in various donation campaigns.
 - **How to Help**: Learn how to contribute, volunteer, or start a campaign.
@@ -20,7 +20,7 @@ Winter Aid BD is a non-profit platform dedicated to collecting and distributing 
 - **Donation History**: View past donations and the impact made.
 - **Animations**: Engaging animations using Animate.css for smooth page transitions.
 
-## Technologies Used
+## 🛠️ Technologies Used
 
 - **React**: Frontend JavaScript library for building the user interface.
 - **React Router DOM**: For routing and navigation across different pages.
@@ -37,7 +37,7 @@ Winter Aid BD is a non-profit platform dedicated to collecting and distributing 
 - **DaisyUI**: A Tailwind CSS plugin that provides pre-designed components to speed up development.
 - - **react-helmet**: For Dynamic Title of Page
 
-## npm Package
+## 📦 npm Package
 
 - animate.css
 - firebase
@@ -52,4 +52,59 @@ Winter Aid BD is a non-profit platform dedicated to collecting and distributing 
 ## Requirement Data
 
 ### [link] (https://docs.google.com/document/d/1f3tbugV_D0CATzbteer6reXLVWmtoAIIX4MaffV48kI/edit?tab=t.0)
+
+
+## 🖥️ Running the Project Locally
+
+Follow these steps to run Winter Aid BD on your local machine:
+
+### Prerequisites
+
+- Install [Node.js](https://nodejs.org/).
+- Install [Git](https://git-scm.com/).
+
+### Steps
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/Hayder987/winter-aid-bd-firebase-auth
+   ```
+
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd winter-aid-bd-firebase-auth
+   ```
+
+3. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+4. **Run the application:**
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and go to `http://localhost:5173` to view the app.
+
+---
+
+## 🔗 Relevant Links
+
+- **GitHub Repository:** [Winter Aid BD Repository](https://github.com/Hayder987/winter-aid-bd-firebase-auth)
+- **Live Application:** [Winter Aid BD](https://winter-aid-bd.firebaseapp.com/)
+
+---
+
+Thank you for supporting **Winter Aid BD**! Together, we can make a difference and help those in need. 🙌
+
+## give me FeedBack On
+
+### (https://hayder-ali.web.app/)
+
+
 
